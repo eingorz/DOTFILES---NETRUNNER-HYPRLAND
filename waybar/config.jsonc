@@ -1,0 +1,181 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 2, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "margin": "5, 30, 0, 30",
+    "modules-left": [
+	"cpu",
+	"memory"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        //"mpd",
+       // "idle_inhibitor",
+        "clock"
+       // "custom/power"
+    ],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+
+
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"1": "TERM",
+		"2": "NET",
+		"3": "DISC",
+		"4": "GAME",
+		"5": "SPOT",
+		"6": "WORK",
+		"7": "NOTE",
+		"8": "TMP",
+		"default": "TMP-X"
+	},
+	"persistent-workspaces": {
+		"*": [1,2,3,4,5,6,7] // 5 workspaces by default on every monitor
+	}
+},
+
+
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "{icon} CPU",
+        "format-alt": "{avg_frequency} GHz",
+        "interval": 3,
+	"format-icons": {
+    		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
+},
+
+
+
+"memory": {
+    "format": "{icon} MEM",
+    "interval": 3,
+    "format-icons": {
+		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
+},
+
+
+
+
+    "temperature": {
+        //"thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C TEMP",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "BL {percent}%",
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% BAT",
+        "format-full": "{capacity}% FULL",
+        "format-charging": "{capacity}% CHG",
+        "format-plugged": "{capacity}% CHG",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "PER",
+        "performance": "PER",
+        "balanced": "BAL",
+        "power-saver": "SAV"
+      }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "WLAN: {essid} ({signalStrength}%)",
+        "format-ethernet": "LAN: {ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% VOL {format_source}",
+        "format-muted": "MUTED {format_source}",
+        "format-source": "{volume}% MIC",
+        "format-source-muted": "MIC MUTED",
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    }
+}

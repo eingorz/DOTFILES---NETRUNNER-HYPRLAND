@@ -1,0 +1,63 @@
+# Zathura configuration file
+# Cyberpunk-inspired colors + JetBrains Mono Nerd Font
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+# One page per row by default
+set pages-per-row 1
+
+# Scroll settings
+set scroll-page-aware "true"
+set smooth-scroll "true"
+set scroll-full-overlap 0.01
+set scroll-step 50
+
+# Zoom settings
+set zoom-min 10
+
+# GUI options
+set guioptions ""
+
+# Font
+set font "Times New Roman 16"
+
+# Colors (Cyberpunk theme)
+set default-bg "#140000"        # background
+set default-fg "#ff3c3c"        # foreground
+
+set statusbar-bg "#090300"
+set statusbar-fg "#ff1100"
+
+set inputbar-bg "#090300"
+set inputbar-fg "#fded02"
+
+set notification-error-bg "#ff1100"
+set notification-error-fg "#140000"
+
+set notification-warning-bg "#fded02"
+set notification-warning-fg "#140000"
+
+set highlight-color "#26bdfd"
+set highlight-active-color "#b5e4f4"
+
+set completion-bg "#090300"
+set completion-fg "#a5a2a2"
+set completion-highlight-bg "#807d7c"
+set completion-highlight-fg "#140000"
+
+set notification-bg "#3a3432"
+set notification-fg "#f7f7f7"
+
+# Recolor settings
+set recolor "true"
+set recolor-lightcolor "#140000"
+set recolor-darkcolor "#ff3c3c"
+set recolor-reverse-video "true"
+set recolor-keephue "true"
+
+# Keybindings
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+

@@ -1,0 +1,54 @@
+* {
+    font-family: "JetBrainsMonoNL Nerd Font", "Fira Code", monospace;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: transparent; /* actual blur from picom */
+    border-bottom: 1px solid #fc3f3f;
+}
+
+#workspaces, #cpu, #memory, #network, #pulseaudio, #temperature, #power-profiles-daemon, #custom-spotify, #backlight, #battery, #idle_inhibitor {
+    background: transparent;
+    padding: 8px 12px;
+    margin: 6px;
+    color: #62edfc;
+    text-shadow: 1px 2px 3px #FC3F3F;
+}
+#clock{
+    background: #fc3f3f;
+    padding: 8px 12px;
+    margin: 15px;
+    box-shadow: 1px 1px 3px 1px #FC3F3F;
+    color: black;
+
+}
+
+#workspaces button{
+    color: #a72020;
+    text-shadow: 1px 2px 3px #fc3f3f;
+}
+
+/* Hover glow */
+#workspaces button:hover,
+#network:hover,
+#pulseaudio:hover {
+    color: #2ffc5f;
+    border: 0;
+}
+
+#memory{
+    color: #2ffc5f;
+}
+#cpu{
+    color: #62edfc;
+}
+
+#workspaces button.active {
+  color: #62edfc;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+
