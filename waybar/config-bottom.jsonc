@@ -41,32 +41,6 @@
     //     }
     // },
 
-
-    "hyprland/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		"1": "TERM",
-		"2": "NET",
-		"3": "DISC",
-		"4": "GAME",
-		"5": "SPOT",
-		"6": "TMP",
-		"default": "TMP-X"
-	},
-	"persistent-workspaces": {
-		"*": [1,2,3,4,5,6] // 5 workspaces by default on every monitor
-	}
-},
-
-
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
         "icon-size": 21,
         "spacing": 10,
@@ -75,32 +49,6 @@
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-
-    "cpu": {
-        "format": "{icon} CPU",
-        "format-alt": "{avg_frequency} GHz",
-        "interval": 3,
-	"format-icons": {
-    		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
-},
-
-
-
-"memory": {
-    "format": "{icon} MEM",
-    "interval": 3,
-    "format-icons": {
-		"default": ["░░░░░░░░░░░","█░░░░░░░░░░","██░░░░░░░░░","███░░░░░░░░","████░░░░░░░", "█████░░░░░░", "██████░░░░░","███████░░░░","████████░░░","█████████░░", "██████████░", "███████████",] },
-},
-
-
-
-
     "temperature": {
         //"thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -155,28 +103,4 @@
         "format-source-muted": "MIC MUTED",
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
 }
