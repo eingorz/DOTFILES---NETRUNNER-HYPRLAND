@@ -11,6 +11,10 @@
 - Will probably add a hyprlock config at some point cuz im getting tired of not being able to lock my laptop lol
 - will probably configure wofi to fit the theme at some point idk
 - **I will most likely get bored of this sooner or later so I'll probably move the CP2077 rice to another folder or smthn after I make a new rice**
+
+## ADDITIONAL STUFF
+- this kind soul made a hyprlock config to go with the rice:
+- https://github.com/Nexus54233/Hyprlock_dotifiles_for_Eingorz/tree/main
   
   # IT MIGHT BE JANKY IDK I'M USUALLY TOO LAZY TO CONFIGURE STUFF THE "PROPER" WAY
 
