@@ -9,7 +9,6 @@
  
 # PLANS
 - Will probably add a hyprlock config at some point cuz im getting tired of not being able to lock my laptop lol
-- at some point I'll 
 - will probably configure wofi to fit the theme at some point idk
 - **I will most likely get bored of this sooner or later so I'll probably move the CP2077 rice to another folder or smthn after I make a new rice**
   
