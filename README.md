@@ -7,4 +7,7 @@
   - zathura - pdf viewer
   - kitty
 
+- will probably configure wofi to fit the theme at some point idk
+  # IT MIGHT BE JANKY IDK I'M USUALLY TOO LAZY TO CONFIGURE STUFF THE "PROPER" WAY
+
 <img width="2560" height="1440" alt="2025-11-24-163542_hyprshot" src="https://github.com/user-attachments/assets/d0f2dd66-0350-4a7d-a577-1a403b905e79" />
